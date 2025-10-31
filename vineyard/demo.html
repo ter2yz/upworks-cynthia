@@ -98,8 +98,11 @@
     margin-bottom: 30px;
     font-weight: 400;
     letter-spacing: 1px;
-    border-bottom: 1px solid;
     line-height: 2;
+  }
+
+  .block-legend-view h2 {
+    border-bottom: 1px solid #c67b5c;
   }
 
   /* Block Legend (Default View) */
@@ -173,6 +176,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
+    border-bottom: 1px solid #c67b5c;
   }
 
   .block-details-header h2 {
@@ -187,15 +191,16 @@
     font-size: 24px;
     line-height: 1;
     padding: 0.6em 0.15em;
-    color: var(--global-palette3, #c67b5c);
+    color: var(--global-palette3, #c67b5c) !important;
     display: flex;
-    box-shadow: none;
+    box-shadow: none !important;
     border-radius: 0;
     cursor: pointer;
     width: 1em;
     position: relative;
     height: 1em;
     box-sizing: content-box;
+    background-color: transparent !important;
   }
 
   .vineyard-close-toggle:hover {
