@@ -114,6 +114,19 @@
 
   .block-legend-item {
     display: flex;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin: -4px -8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  .block-legend-item:hover {
+    background-color: rgba(198, 123, 92, 0.1);
+  }
+
+  .block-legend-item.active {
+    background-color: rgba(198, 123, 92, 0.2);
   }
 
   .block-label {
@@ -152,6 +165,65 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Block Details Header with Close Button */
+  .block-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .block-details-header h2 {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  /* Close Button Styles (based on site drawer-toggle) */
+  .vineyard-close-toggle {
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0.6em 0.15em;
+    color: var(--global-palette3, #c67b5c);
+    display: flex;
+    box-shadow: none;
+    border-radius: 0;
+    cursor: pointer;
+    width: 1em;
+    position: relative;
+    height: 1em;
+    box-sizing: content-box;
+  }
+
+  .vineyard-close-toggle:hover {
+    opacity: 0.8;
+  }
+
+  .vineyard-close-bar {
+    width: 0.75em;
+    height: 0.08em;
+    background: currentColor;
+    transform-origin: center center;
+    position: absolute;
+    border-radius: 0.08em;
+    left: 50%;
+    margin-left: -0.375em;
+    top: 50%;
+    margin-top: -0.04em;
+    transition:
+      transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .vineyard-close-bar:first-child {
+    transform: rotate(45deg);
+  }
+
+  .vineyard-close-bar:last-child {
+    transform: rotate(-45deg);
   }
 
   .block-detail-item {
@@ -2034,67 +2106,131 @@
       <div id="blockLegend" class="block-legend-view">
         <h2>Block Legend</h2>
         <div class="block-legend">
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="A"
+            onclick="handleLegendClick('A')"
+          >
             <span class="block-label">A.</span>
             <span class="block-variety">Merlot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="G"
+            onclick="handleLegendClick('G')"
+          >
             <span class="block-label">G.</span>
             <span class="block-variety">Petit Verdot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="B"
+            onclick="handleLegendClick('B')"
+          >
             <span class="block-label">B.</span>
             <span class="block-variety">Merlot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="H"
+            onclick="handleLegendClick('H')"
+          >
             <span class="block-label">H.</span>
             <span class="block-variety">Chardonnay</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="C"
+            onclick="handleLegendClick('C')"
+          >
             <span class="block-label">C.</span>
             <span class="block-variety">Cabernet Franc</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="I"
+            onclick="handleLegendClick('I')"
+          >
             <span class="block-label">I.</span>
             <span class="block-variety">Cabernet Sauvignon</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="D"
+            onclick="handleLegendClick('D')"
+          >
             <span class="block-label">D.</span>
             <span class="block-variety">Merlot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="J"
+            onclick="handleLegendClick('J')"
+          >
             <span class="block-label">J.</span>
             <span class="block-variety">Syrah</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="E1"
+            onclick="handleLegendClick('E1')"
+          >
             <span class="block-label">E1.</span>
             <span class="block-variety">Petit Verdot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="K"
+            onclick="handleLegendClick('K')"
+          >
             <span class="block-label">K.</span>
             <span class="block-variety">Cabernet Sauvignon</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="E2"
+            onclick="handleLegendClick('E2')"
+          >
             <span class="block-label">E2.</span>
             <span class="block-variety">Merlot</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="L"
+            onclick="handleLegendClick('L')"
+          >
             <span class="block-label">L.</span>
             <span class="block-variety">Chardonnay</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="E3"
+            onclick="handleLegendClick('E3')"
+          >
             <span class="block-label">E3.</span>
             <span class="block-variety">Malbec</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="M"
+            onclick="handleLegendClick('M')"
+          >
             <span class="block-label">M.</span>
             <span class="block-variety">Syrah</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="F"
+            onclick="handleLegendClick('F')"
+          >
             <span class="block-label">F.</span>
             <span class="block-variety">Malbec</span>
           </div>
-          <div class="block-legend-item">
+          <div
+            class="block-legend-item"
+            data-block="N"
+            onclick="handleLegendClick('N')"
+          >
             <span class="block-label">N.</span>
             <span class="block-variety">Cabernet Sauvignon</span>
           </div>
@@ -2107,7 +2243,17 @@
 
       <!-- Active: Block Details (Hidden by default) -->
       <div id="blockDetails" class="block-details">
-        <h2 id="blockTitle">Block M</h2>
+        <div class="block-details-header">
+          <h2 id="blockTitle">Block M</h2>
+          <button
+            class="vineyard-close-toggle"
+            aria-label="Close block details"
+            onclick="handleCloseBlock()"
+          >
+            <span class="vineyard-close-bar"></span>
+            <span class="vineyard-close-bar"></span>
+          </button>
+        </div>
         <div class="block-detail-item">
           <span class="block-detail-label">Grape:</span>
           <span id="blockGrape">Syrah</span>
@@ -2278,6 +2424,10 @@
       blockDetails.classList.remove("active");
       mapWrapper.classList.remove("active");
       shadowOverlay.classList.remove("active");
+      // Remove active state from all legend items
+      document.querySelectorAll(".block-legend-item").forEach((item) => {
+        item.classList.remove("active");
+      });
       return;
     }
 
@@ -2294,6 +2444,46 @@
     blockDetails.classList.add("active");
     mapWrapper.classList.add("active");
     shadowOverlay.classList.add("active");
+
+    // Highlight active legend item
+    document.querySelectorAll(".block-legend-item").forEach((item) => {
+      if (item.getAttribute("data-block") === blockId) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  // Handle Legend Item Click
+  function handleLegendClick(blockId) {
+    // Find the corresponding SVG block
+    const svgBlock = document.querySelector(
+      `.vineyard-block[data-block="${blockId}"]`,
+    );
+
+    if (activeBlock === blockId) {
+      // Click same block again - deactivate and return to legend
+      activeBlock = null;
+      allBlocks.forEach((b) => b.classList.remove("active"));
+      updateInfoPanel(null);
+    } else {
+      // Click different block - activate this block
+      activeBlock = blockId;
+      allBlocks.forEach((b) => b.classList.remove("active"));
+      if (svgBlock) {
+        svgBlock.classList.add("active");
+      }
+      updateInfoPanel(blockId);
+    }
+  }
+
+  // Handle Close Button Click
+  function handleCloseBlock() {
+    // Deactivate current block and return to legend
+    activeBlock = null;
+    allBlocks.forEach((b) => b.classList.remove("active"));
+    updateInfoPanel(null);
   }
 
   // Click event listeners for all blocks (no hover)
