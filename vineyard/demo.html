@@ -89,6 +89,7 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 3;
+    font-family: "Open Sans", "Cinzel", serif;
   }
 
   .vineyard-info-panel h2 {
@@ -175,14 +176,17 @@
   /* Mobile Block List - Hidden on Desktop */
   .vineyard-mobile-blocks {
     display: none;
+    font-family: "Open Sans", "Cinzel", serif;
   }
 
   .mobile-block-item {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px 15px;
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #d6cfc4;
+    font-family: "Cinzel", serif;
+    font-weight: 300;
   }
 
   .mobile-block-header {
@@ -202,13 +206,20 @@
   .mobile-block-subtitle {
     color: #666;
     font-size: 0.95em;
-    margin-top: 4px;
+    margin-top: 0px;
+    font-family: "Open Sans", sans-serif;
   }
 
   .mobile-toggle-icon {
-    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
     color: #c67b5c;
     transition: transform 0.3s ease;
+  }
+
+  .mobile-toggle-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .mobile-toggle-icon.open {
@@ -218,15 +229,20 @@
   .mobile-block-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition:
+      max-height 0.3s ease,
+      border-color 0.3s ease,
+      margin-top 0.3s ease;
     padding-top: 0;
+    font-family: "Open Sans", sans-serif;
+    border-top: 1px solid transparent;
   }
 
   .mobile-block-content.open {
     max-height: 500px;
     padding-top: 15px;
-    border-top: 1px solid #e5e5e5;
     margin-top: 15px;
+    border-top-color: #e5e5e5;
   }
 
   .mobile-block-detail {
@@ -243,6 +259,11 @@
 
   /* Mobile Responsive */
   @media (max-width: 968px) {
+    .vineyard-interactive-section.alignfull {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     .vineyard-interactive-section {
       padding: 40px 15px;
     }
@@ -2342,7 +2363,7 @@
                         <div class="mobile-block-title">Block ${blockId}</div>
                         <div class="mobile-block-subtitle">${data.grape}</div>
                     </div>
-                    <div class="mobile-toggle-icon" id="icon-${blockId}">▼</div>
+                    <span class="mobile-toggle-icon" id="icon-${blockId}"><span class="kadence-svg-iconset svg-baseline"><svg aria-hidden="true" class="kadence-svg-icon kadence-arrow-down-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Expand</title><path d="M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></span></span>
                 </div>
                 <div class="mobile-block-content" id="content-${blockId}">
                     <div class="mobile-block-detail">
