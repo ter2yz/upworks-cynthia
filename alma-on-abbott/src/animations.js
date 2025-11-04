@@ -33,25 +33,25 @@
     img.classList.add('logo-hover');
   });
 
-  // Add subtle entrance animation to footer when it comes into view
-  const footer = document.querySelector('footer');
-  if (footer) {
-    const footerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const footerElements = footer.querySelectorAll('img, h3, p');
-          footerElements.forEach((el, index) => {
-            setTimeout(() => {
-              el.style.opacity = '0';
-              el.style.transform = 'translateY(20px)';
-              el.style.animation = `fadeInUp 0.6s ease forwards`;
-            }, index * 100);
-          });
-          footerObserver.unobserve(footer);
-        }
-      });
-    }, { threshold: 0.2 });
+  // // Add subtle entrance animation to footer when it comes into view
+  // const footer = document.querySelector('footer');
+  // if (footer) {
+  //   const footerObserver = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         const footerElements = footer.querySelectorAll('img, h3, p');
+  //         footerElements.forEach((el, index) => {
+  //           setTimeout(() => {
+  //             el.style.opacity = '0';
+  //             el.style.transform = 'translateY(20px)';
+  //             el.style.animation = `fadeInUp 0.6s ease forwards`;
+  //           }, index * 100);
+  //         });
+  //         footerObserver.unobserve(footer);
+  //       }
+  //     });
+  //   }, { threshold: 0.2 });
 
-    footerObserver.observe(footer);
-  }
+  //   footerObserver.observe(footer);
+  // }
 })();
