@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-black: #000;
     --color-white: #fff;
@@ -241,6 +242,9 @@
   .table {
     display: table;
   }
+  .h-\[85vh\] {
+    height: 85vh;
+  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -252,6 +256,9 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .min-h-\[520px\] {
+    min-height: 520px;
   }
   .min-h-\[600px\] {
     min-height: 600px;
@@ -349,6 +356,9 @@
   }
   .bg-cover {
     background-size: cover;
+  }
+  .bg-bottom-right {
+    background-position: right bottom;
   }
   .bg-center {
     background-position: center;
@@ -455,6 +465,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .hover\:-translate-y-1 {
     &:hover {
       @media (hover: hover) {
@@ -484,6 +499,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-yellow-300);
+      }
+    }
+  }
+  .hover\:text-\[\#444444\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #444444;
       }
     }
   }
