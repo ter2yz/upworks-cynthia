@@ -1,0 +1,105 @@
+/* ====== PRICE LINE ANIMATION ====== */
+.price-line {
+  --t-fade: .6s;
+  --t-strike: .45s;
+  --delay-strike: .9s;
+  --delay-to: 1.15s;
+  --delay-new: 1.45s;
+
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+}
+
+/* Start hidden until .is-visible arrives (from IntersectionObserver) */
+.price-line .lead,
+.price-line .old,
+.price-line .to,
+.price-line .new {
+  opacity: 0;
+}
+
+/* Group "Studios from $345,900" fades first */
+.price-line.is-visible .lead,
+.price-line.is-visible .old {
+  animation: priceLinesFadeIn var(--t-fade) ease forwards;
+}
+
+.price-line.is-visible .lead {
+  animation-delay: 0s;
+}
+
+.price-line.is-visible .old {
+  animation-delay: 0.15s;
+}
+
+/* Animated strikethrough over old price */
+.price-line .old-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.price-line .strike {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 0.12em;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: #CE1616;
+  border-radius: 2px;
+}
+
+.price-line.is-visible .strike {
+  animation: priceLinesStrikeDraw var(--t-strike) ease forwards var(--delay-strike);
+}
+
+/* "to" fades after the strike starts */
+.price-line.is-visible .to {
+  animation: priceLinesFadeIn var(--t-fade) ease forwards var(--delay-to);
+}
+
+/* New price fades last */
+.price-line.is-visible .new {
+  animation: priceLinesRiseIn var(--t-fade) ease forwards var(--delay-new);
+}
+
+/* Keyframes */
+@keyframes priceLinesFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes priceLinesRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes priceLinesStrikeDraw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .price-line .lead,
+  .price-line .old,
+  .price-line .to,
+  .price-line .new {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .price-line .strike {
+    transform: scaleX(1);
+  }
+}

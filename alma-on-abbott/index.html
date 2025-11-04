@@ -5,63 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma on Abbott - Luxury Living</title>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WF4K9JGJ');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <link href="./dist/output.css" rel="stylesheet">
+
+    <!-- Price Animation CSS -->
+    <link href="./src/price-animation.css" rel="stylesheet">
+
+    <!-- General Animations CSS -->
+    <link href="./src/animations.css" rel="stylesheet">
 </head>
-<body class="font-inter antialiased">
+<body class="font-manrope antialiased">
 
     <!-- Hero Section -->
     <section class="relative h-screen min-h-[600px] bg-cover bg-center flex items-start" style="background-image: url('./assets/hero.jpg');">
         <!-- Header -->
-        <header class="w-full max-w-[1320px] z-10 flex items-center justify-between px-6 py-8 lg:px-0 mx-auto">
-            <div class="w-24 md:w-32">
+        <header class="w-full max-w-[1320px] h-full lg:h-auto z-10 flex items-center justify-center lg:justify-between px-6 py-8 lg:px-0 mx-auto">
+            <div class="absolute lg:static flex top-14 lg:top-0 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-32">
                 <img src="./assets/logo-header_left.svg" alt="Alma on Abbott" class="w-full h-auto">
             </div>
-            <button class="bg-black text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-900 transition-colors cursor-pointer">
+            <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott"
+                class="inline-block bg-black text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-base font-medium hover:bg-black/90 hover:-translate-y-1 transition cursor-pointer text-center">
                 Book Tour Now
-            </button>
+            </a>
         </header>
     </section>
 
     <!-- 20% OFF Section -->
-    <section class="bg-[#FFE500] py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-0">
-        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-            <div>
-                <h2 class="font-bebas text-6xl md:text-7xl lg:text-8xl leading-none mb-6 md:mb-0">
+    <section class="bg-alma-yellow py-12 md:py-20 lg:py-24 px-6 md:px-12 xl:px-0">
+        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
+            <div class="animate-on-scroll">
+                <h2 class="font-bebas font-black text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6">
                     20% OFF.<br>NOV 22.
                 </h2>
             </div>
-            <div>
+            <div class="animate-on-scroll animate-delay-200">
                 <div class="space-y-2 mb-6">
-                    
-                        <p class="text-base md:text-lg font-medium leading-[2]">
-                            Studios from
-                            <span class="line-through text-base md:text-lg decoration-[#CE1616]">$345,900</span>
-                            $276,720
-                        </p>
-                    
-                        <p class="text-base md:text-lg font-medium leading-[2]">
-                            1-Bedroom from
-                            <span class="line-through text-base md:text-lg decoration-[#CE1616]">$529,900</span>
-                            $423,920
-                        </p>
 
-                    
-                        <p class="text-base md:text-lg font-medium leading-[2]">
-                            2-Bedroom from
-                            <span class="line-through text-base md:text-lg decoration-[#CE1616]">$629,900</span>
-                            $503,920
-                        </p>
+                        <div class="price-line text-base md:text-lg font-medium leading-none lg:leading-loose" aria-label="Studios from 345,900 to 276,720">
+                            <span class="lead">Studios from</span>
+                            <span class="old-wrap">
+                                <strong class="old">$345,900</strong>
+                                <span class="strike" aria-hidden="true"></span>
+                            </span>
+                            <strong class="new">$276,720</strong>
+                        </div>
+
+                        <div class="price-line text-base md:text-lg font-medium leading-none lg:leading-loose" aria-label="1-Bedroom from 529,900 to 423,920">
+                            <span class="lead">1-Bedroom from</span>
+                            <span class="old-wrap">
+                                <strong class="old">$529,900</strong>
+                                <span class="strike" aria-hidden="true"></span>
+                            </span>
+                            <strong class="new">$423,920</strong>
+                        </div>
+
+
+                        <div class="price-line text-base md:text-lg font-medium leading-none lg:leading-loose" aria-label="2-Bedroom from 629,900 to 503,920">
+                            <span class="lead">2-Bedroom from</span>
+                            <span class="old-wrap">
+                                <strong class="old">$629,900</strong>
+                                <span class="strike" aria-hidden="true"></span>
+                            </span>
+                            <strong class="new">$503,920</strong>
+                        </div>
 
                 </div>
-                <button class="bg-black text-white px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-medium hover:bg-gray-900 transition-colors cursor-pointer">
+                <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott" class="w-full sm:w-auto bg-black text-white px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-medium hover:bg-black/90 hover:-translate-y-1 transition cursor-pointer inline-block text-center">
                     Book a Tour Now
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -72,13 +96,13 @@
 
     <!-- Preview Now Section (Black Background) -->
     <section class="bg-black text-white py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
-        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-            <div>
-                <h2 class="font-bebas text-5xl md:text-6xl lg:text-7xl leading-none mb-6">
-                    PREVIEW NOW.<br>BE READY ON<br>NOV 22.
+        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+            <div class="animate-on-scroll">
+                <h2 class="font-bebas font-black text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6">
+                    PREVIEW NOW.<br />BE READY ON<br />NOV 22.
                 </h2>
             </div>
-            <div>
+            <div class="animate-on-scroll animate-delay-200">
                 <div class="flex flex-col justify-center max-w-[520px]">
                     <p class="text-base md:text-lg mb-6 leading-relaxed">
                         On November 22, Alma will offer a one-day 20% savings for ready purchasers. The key is preparation.
@@ -86,10 +110,10 @@
                     <p class="text-base md:text-lg mb-6 leading-relaxed">
                         Book your private preview before November 20 to explore each home in person. You'll have time to make a confident choice and be ready to move forward when the opportunity opens.
                     </p>
-                    <div>
-                        <button class="bg-[#FFE500] text-black px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-bold hover:bg-yellow-300 transition-colors">
+                    <div class="w-full sm:w-auto">
+                        <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott" class="w-full sm:w-auto bg-alma-yellow text-black px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-bold hover:bg-yellow-300 hover:-translate-y-1 transition inline-block text-center">
                             Book a Tour Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -97,12 +121,12 @@
     </section>
 
     <!-- Book Your Tour Section (Yellow Background) -->
-    <section class="bg-[#FFE500] py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
-        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-            <h2 class="font-bebas text-5xl md:text-6xl lg:text-7xl leading-none mb-6">
+    <section class="bg-alma-yellow py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
+        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
+            <h2 class="font-bebas font-black text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6 animate-on-scroll">
                 BOOK YOUR<br>TOUR NOW
             </h2>
-            <div>
+            <div class="animate-on-scroll animate-delay-200">
                 <div class="flex flex-col justify-center max-w-[520px]">
                     <p class="text-base md:text-lg mb-6 leading-relaxed">
                         On November 22, Alma will offer a one-day 20% savings for ready purchasers. The key is preparation.
@@ -110,10 +134,10 @@
                     <p class="text-base md:text-lg mb-6 leading-relaxed">
                         Book your private preview before November 20 to explore each home in person. You'll have time to make a confident choice and be ready to move forward when the opportunity opens.
                     </p>
-                    <div>
-                        <button class="bg-black text-white px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-medium hover:bg-gray-900 transition-colors">
+                    <div class="w-full sm:w-auto animate-delay-300">
+                        <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott" class="w-full sm:w-auto bg-black text-white px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-medium hover:bg-black/90 hover:-translate-y-1 transition inline-block text-center">
                             Book a Tour Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -123,43 +147,44 @@
     <!-- Discover Section (Black Background) -->
     <section class="bg-black text-white py-12 md:py-16 px-6 md:px-12 lg:px-20">
         <div class="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <h2 class="font-bebas text-4xl md:text-5xl lg:text-6xl leading-none">
+            <h2 class="font-bebas font-black text-3xl md:text-4xl lg:text-5xl leading-none animate-on-scroll">
                 DISCOVER ALMA ON ABBOTT
             </h2>
-            <button class="bg-[#FFE500] text-black px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-bold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer">
+            <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott" class="w-full sm:w-auto bg-alma-yellow text-black px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-bold hover:bg-yellow-300 hover:-translate-y-1 transition whitespace-nowrap cursor-pointer inline-block text-center animate-on-scroll animate-delay-200">
                 Browse Floorplans
-            </button>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#FFE500] py-12 md:py-16 px-6 md:px-12 lg:px-20">
+    <footer class="bg-alma-yellow py-12 md:py-16 px-6 md:px-12 lg:px-20">
         <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="hidden lg:block">
-                    <img src="./assets/logo-mission_group.svg" alt="Mission Group" class="w-32 md:w-40 h-auto">
-                </div>
+                <img src="./assets/logo-mission_group.svg" alt="Mission Group" class="w-32 md:w-56 h-auto">
+            </div>
             <div class="flex flex-col">
-                <div class="flex mb-6 justify-between items-start">
+                <div class="flex flex-col lg:flex-row mb-6 lg:justify-between items-center lg:items-start">
                     <!-- Contact Info -->
                     <div>
-                        <h3 class="font-bebas text-3xl md:text-4xl mb-4">
+                        <h3 class="font-manrope font-semibold text-3xl md:text-4xl mb-4">
                             info@liveatalma.ca<br>250-448-0028
                         </h3>
                     </div>
 
                     <!-- Map -->
                     <div class="flex justify-center">
-                        <img src="./assets/footer-map.png" alt="Location Map" class="w-full max-w-[208px] h-auto">
+                        <img src="./assets/footer-map.png" alt="Location Map" class="w-full max-w-52 h-auto">
                     </div>
 
-                    <!-- Mission Group Logo -->
-                    <div class="flex lg:hidden items-end justify-start lg:justify-end">
-                        <img src="./assets/logo-mission_group.svg" alt="Mission Group" class="w-32 md:w-40 h-auto">
-                    </div>
+                </div>
+
+                <!-- Mission Group Logo -->
+                <div class="flex lg:hidden items-end justify-start lg:justify-end mt-10">
+                    <img src="./assets/logo-mission_group.svg" alt="Mission Group" class="w-40 h-auto">
                 </div>
 
                 <!-- Disclaimer -->
-                <div class="">
+                <div class="mt-10 lg:mt-auto">
                     <p class="text-xs leading-relaxed max-w-4xl">
                         Disclaimer: Prices, availability, sizes, specifications, and features are subject to change without notice.
                         This is not an offering for sale. Such an offering can only be made after filing a disclosure statement. E.&O.E.
@@ -169,6 +194,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Price Animation Script -->
+    <script src="./src/price-animation.js"></script>
+
+    <!-- General Animations Script -->
+    <script src="./src/animations.js"></script>
 
 </body>
 </html>

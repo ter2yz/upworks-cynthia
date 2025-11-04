@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bebas': ['"Bebas Neue"', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'bebas': ['"Barlow Condensed"', 'sans-serif'],
+        'manrope': ['Manrope', 'sans-serif'],
       },
       colors: {
         'alma-yellow': '#FFE500',

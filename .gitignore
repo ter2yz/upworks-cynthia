@@ -1,0 +1,8 @@
+# Root
+.claude/
+
+# Alma on Abbott
+alma-on-abbott/.claude/
+alma-on-abbott/node_modules/
+alma-on-abbott/screenshots/
+
