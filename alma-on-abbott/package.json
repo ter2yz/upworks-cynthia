@@ -1,0 +1,17 @@
+{
+  "name": "alma-on-abbott",
+  "version": "1.0.0",
+  "description": "Alma on Abbott - Luxury Living Website",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:minify": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
