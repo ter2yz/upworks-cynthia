@@ -1,14 +1,28 @@
 /* ====== PRICE LINE ANIMATION ====== */
 .price-line {
-  --t-fade: .6s;
-  --t-strike: .45s;
-  --delay-strike: .9s;
-  --delay-to: 1.15s;
-  --delay-new: 1.45s;
+  --t-fade: .3s;
+  --t-strike: .2s;
+  --delay-strike: .4s;
+  --delay-to: .6s;
+  --delay-new: .8s;
+  --stagger-offset: 0s;
 
   align-items: center;
   gap: 0.35rem;
   position: relative;
+}
+
+/* Stagger delays for sequential animations */
+.price-line:nth-child(1) {
+  --stagger-offset: 0s;
+}
+
+.price-line:nth-child(2) {
+  --stagger-offset: 1.1s;
+}
+
+.price-line:nth-child(3) {
+  --stagger-offset: 2.2s;
 }
 
 /* Start hidden until .is-visible arrives (from IntersectionObserver) */
@@ -26,11 +40,11 @@
 }
 
 .price-line.is-visible .lead {
-  animation-delay: 0s;
+  animation-delay: calc(0s + var(--stagger-offset));
 }
 
 .price-line.is-visible .old {
-  animation-delay: 0.15s;
+  animation-delay: calc(0.15s + var(--stagger-offset));
 }
 
 /* Animated strikethrough over old price */
@@ -52,17 +66,17 @@
 }
 
 .price-line.is-visible .strike {
-  animation: priceLinesStrikeDraw var(--t-strike) ease forwards var(--delay-strike);
+  animation: priceLinesStrikeDraw var(--t-strike) ease forwards calc(var(--delay-strike) + var(--stagger-offset));
 }
 
 /* "to" fades after the strike starts */
 .price-line.is-visible .to {
-  animation: priceLinesFadeIn var(--t-fade) ease forwards var(--delay-to);
+  animation: priceLinesFadeIn var(--t-fade) ease forwards calc(var(--delay-to) + var(--stagger-offset));
 }
 
 /* New price fades last */
 .price-line.is-visible .new {
-  animation: priceLinesRiseIn var(--t-fade) ease forwards var(--delay-new);
+  animation: priceLinesRiseIn var(--t-fade) ease forwards calc(var(--delay-new) + var(--stagger-offset));
 }
 
 /* Keyframes */
@@ -89,6 +103,14 @@
   }
 }
 
+/* CTA button appears after all price animations complete */
+.price-cta {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: priceLinesRiseIn 0.5s ease forwards;
+  animation-delay: 3.3s; /* After all 3 price lines complete (2.2s + 1.1s) */
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .price-line .lead,
@@ -101,5 +123,9 @@
   }
   .price-line .strike {
     transform: scaleX(1);
+  }
+  .price-cta {
+    opacity: 1;
+    transform: none;
   }
 }

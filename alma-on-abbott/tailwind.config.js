@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bebas': ['"Barlow Condensed"', 'sans-serif'],
+        'barlow': ['Barlow Condensed', 'sans-serif'],
         'manrope': ['Manrope', 'sans-serif'],
       },
       colors: {
