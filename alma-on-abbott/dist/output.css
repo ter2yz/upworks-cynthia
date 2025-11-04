@@ -41,15 +41,20 @@
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
     --leading-tight: 1.25;
     --leading-relaxed: 1.625;
+    --leading-loose: 2;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-bebas: "Bebas Neue", sans-serif;
     --font-inter: "Inter", sans-serif;
+    --color-alma-yellow: #FFE500;
   }
 }
 @layer base {
@@ -341,6 +346,9 @@
   .bg-\[\#FFE500\] {
     background-color: #FFE500;
   }
+  .bg-alma-yellow {
+    background-color: var(--color-alma-yellow);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -421,13 +429,25 @@
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
   }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -512,6 +532,11 @@
   .md\:w-40 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:w-56 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 56);
     }
   }
   .md\:w-auto {
@@ -675,6 +700,12 @@
       padding-block: calc(var(--spacing) * 24);
     }
   }
+  .lg\:text-5xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
   .lg\:text-6xl {
     @media (width >= 64rem) {
       font-size: var(--text-6xl);
@@ -697,6 +728,12 @@
     @media (width >= 64rem) {
       --tw-leading: 2;
       line-height: 2;
+    }
+  }
+  .lg\:leading-loose {
+    @media (width >= 64rem) {
+      --tw-leading: var(--leading-loose);
+      line-height: var(--leading-loose);
     }
   }
   .xl\:px-0 {
