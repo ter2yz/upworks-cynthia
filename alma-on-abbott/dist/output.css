@@ -29,10 +29,8 @@
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
-    --font-weight-black: 900;
     --leading-relaxed: 1.625;
     --leading-loose: 2;
     --default-transition-duration: 150ms;
@@ -238,9 +236,6 @@
   .h-\[50vh\] {
     height: 50vh;
   }
-  .h-\[85vh\] {
-    height: 85vh;
-  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -252,9 +247,6 @@
   }
   .min-h-\[400px\] {
     min-height: 400px;
-  }
-  .min-h-\[520px\] {
-    min-height: 520px;
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
@@ -441,21 +433,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .hover\:-translate-y-1 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * -1);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:bg-\[\#444444\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #444444;
-      }
-    }
-  }
   .hover\:bg-alma-yellow {
     &:hover {
       @media (hover: hover) {
@@ -470,10 +447,10 @@
       }
     }
   }
-  .hover\:bg-yellow-300 {
+  .hover\:bg-transparent {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-yellow-300);
+        background-color: transparent;
       }
     }
   }
