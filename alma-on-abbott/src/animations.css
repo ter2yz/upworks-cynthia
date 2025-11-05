@@ -2,188 +2,196 @@
 
 /* Fade in from bottom */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Simple fade in */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Fade in from left */
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Fade in from right */
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Scale fade in */
 @keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* ====== ANIMATION CLASSES ====== */
 
 .animate-on-scroll {
-  opacity: 0;
+    opacity: 0;
 }
 
 .animate-on-scroll.is-visible {
-  animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1s ease forwards;
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 .animate-fade-in-left {
-  animation: fadeInLeft 0.8s ease forwards;
+    animation: fadeInLeft 0.8s ease forwards;
 }
 
 .animate-fade-in-right {
-  animation: fadeInRight 0.8s ease forwards;
+    animation: fadeInRight 0.8s ease forwards;
 }
 
 .animate-fade-in-scale {
-  animation: fadeInScale 0.8s ease forwards;
+    animation: fadeInScale 0.8s ease forwards;
 }
 
 /* Staggered animation delays */
-.animate-delay-100 { animation-delay: 0.1s; }
-.animate-delay-200 { animation-delay: 0.2s; }
-.animate-delay-300 { animation-delay: 0.3s; }
-.animate-delay-400 { animation-delay: 0.4s; }
-.animate-delay-500 { animation-delay: 0.5s; }
-.animate-delay-600 { animation-delay: 0.6s; }
+.animate-delay-100 {
+    animation-delay: 0.1s;
+}
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+.animate-delay-300 {
+    animation-delay: 0.3s;
+}
+.animate-delay-400 {
+    animation-delay: 0.4s;
+}
+.animate-delay-500 {
+    animation-delay: 0.5s;
+}
+.animate-delay-600 {
+    animation-delay: 0.6s;
+}
 
 /* ====== SMOOTH TRANSITIONS ====== */
 
 /* Smooth button hover effects */
 a[href^="mailto"],
 button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Image hover effects */
 img {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-hover:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Section background images with parallax-like effect */
 section[style*="background-image"] {
-  background-attachment: scroll;
-  transition: transform 0.1s ease-out;
+    background-attachment: scroll;
+    transition: transform 0.1s ease-out;
 }
 
 /* Header fade in on load */
 header {
-  animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 header > div:first-child {
-  animation: fadeInLeft 0.8s ease forwards 0.2s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+    animation: fadeInLeft 0.8s ease forwards 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 header > a {
-  animation: fadeInRight 0.8s ease forwards 0.2s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+    animation: fadeInRight 0.8s ease forwards 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 /* Section title animations */
 h2 {
-  transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 /* Footer elements */
 footer img,
 footer h3,
 footer p {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-footer img:hover {
-  transform: scale(1.02);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* ====== RESPONSIVE & ACCESSIBILITY ====== */
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 
-  .animate-on-scroll,
-  header > div:first-child,
-  header > a {
-    opacity: 1 !important;
-  }
+    .animate-on-scroll,
+    header > div:first-child,
+    header > a {
+        opacity: 1 !important;
+    }
 
-  a[href^="mailto"]:hover,
-  button:hover,
-  img:hover {
-    transform: none !important;
-  }
+    a[href^="mailto"]:hover,
+    button:hover,
+    img:hover {
+        transform: none !important;
+    }
 }
 
 /* Ensure smooth scrolling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+    html {
+        scroll-behavior: auto;
+    }
 }
