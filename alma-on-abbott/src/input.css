@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-barlow: "Barlow Condensed", sans-serif;
-  --font-manrope: "Manrope", sans-serif;
-  --color-alma-yellow: #FFE500;
+    --font-barlow: "Barlow Condensed", sans-serif;
+    --font-manrope: "Manrope", sans-serif;
+    --color-alma-yellow: #ffe500;
 }
