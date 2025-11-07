@@ -27,15 +27,8 @@
     <!-- Tailwind CSS -->
     <link href="./dist/output.css" rel="stylesheet">
 
-    <!-- Price Animation CSS -->
-    <link href="./src/price-animation.css" rel="stylesheet">
-
     <!-- General Animations CSS -->
     <link href="./src/animations.css" rel="stylesheet">
-
-    <!-- Zapier Web Components -->
-    <script type='module'
-        src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 </head>
 
 <body class="font-manrope antialiased">
@@ -58,105 +51,21 @@
         </header>
     </section>
 
-    <!-- 20% OFF Section -->
-    <section class="bg-alma-yellow py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
-        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
-            <div class="animate-on-scroll">
-                <h2 class="font-barlow font-extrabold text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6">
-                    20% OFF.<br>NOV 22.
-                </h2>
-            </div>
-            <div class="animate-on-scroll animate-delay-200">
-                <div class="space-y-2 mb-6">
-
-                    <div class="font-manrope price-line text-base md:text-lg font-medium leading-none lg:leading-loose"
-                        aria-label="Studios from 345,900 to 276,720">
-                        <span class="lead font-manrope">Studios from</span>
-                        <span class="old-wrap">
-                            <strong class="old">$345,900</strong>
-                            <span class="strike" aria-hidden="true"></span>
-                        </span>
-                        <strong class="new">$276,720</strong>
-                    </div>
-
-                    <div class="price-line text-base md:text-lg font-medium leading-none lg:leading-loose"
-                        aria-label="1-Bedroom from 529,900 to 423,920">
-                        <span class="lead">1-Bedroom from</span>
-                        <span class="old-wrap">
-                            <strong class="old">$529,900</strong>
-                            <span class="strike" aria-hidden="true"></span>
-                        </span>
-                        <strong class="new">$423,920</strong>
-                    </div>
-
-
-                    <div class="price-line text-base md:text-lg font-medium leading-none lg:leading-loose"
-                        aria-label="2-Bedroom from 629,900 to 503,920">
-                        <span class="lead">2-Bedroom from</span>
-                        <span class="old-wrap">
-                            <strong class="old">$629,900</strong>
-                            <span class="strike" aria-hidden="true"></span>
-                        </span>
-                        <strong class="new">$503,920</strong>
-                    </div>
-
-                </div>
-                <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott"
-                    class="border-2 border-black price-cta w-full sm:w-auto bg-black text-white px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-medium hover:bg-alma-yellow hover:text-black transition cursor-pointer inline-block text-center">
-                    Book a Tour Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interior Image Section -->
-    <section class="relative h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center"
-        style="background-image: url('./assets/section-image_alma_sw_home.png');">
-    </section>
-
     <!-- Preview Now Section (Black Background) -->
-    <section class="bg-black text-white py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
-        <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-            <div class="animate-on-scroll">
-                <h2 class="font-barlow font-extrabold text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6">
-                    PREVIEW NOW.<br />BE READY ON<br />NOV 22.
-                </h2>
-            </div>
-            <div class="animate-on-scroll animate-delay-200">
-                <div class="flex flex-col justify-center max-w-[520px]">
-                    <p class="text-base md:text-lg mb-6 leading-relaxed">
-                        On November 22, Alma will offer a one-day 20% savings for ready purchasers. The key is
-                        preparation.
-                    </p>
-                    <p class="text-base md:text-lg mb-6 leading-relaxed">
-                        Book your private preview today to explore each home in person by November 19. You'll have time
-                        to make a
-                        confident choice and be ready to move forward when the opportunity opens.
-                    </p>
-                    <div class="w-full sm:w-auto">
-                        <a href="mailto:info@liveatalma.ca?subject=Preview%20Tour%20at%20Alma%20on%20Abbott"
-                            class="border-2 border-alma-yellow w-full sm:w-auto bg-alma-yellow text-black px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-medium hover:bg-black hover:text-alma-yellow transition inline-block text-center">
-                            Book a Tour Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Book Now with Form Section (Yellow Background) -->
     <section class="bg-alma-yellow py-12 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20">
         <div class="max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
             <div class="animate-on-scroll">
                 <h2 class="uppercase font-barlow font-extrabold text-5xl md:text-6xl lg:text-7xl leading-none lg:mb-6">
-                    Book your<br />tour now
+                    Thank you<br class="hidden md:block" /> for your<br class="hidden md:block" /> interest
                 </h2>
             </div>
             <div class="animate-on-scroll animate-delay-200">
                 <div class="flex flex-col justify-center max-w-[520px]">
-                    <zapier-interfaces-page-embed id="alma-book-form" page-id='cmhnscoav001lvvcctv7bw7uj'
-                        test-id='cmhnscoav001lvvcctv7bw7uj-zapier-interfaces-page-embed-iframe' no-background='false'
-                        style='max-width: 900px; height: 500px;'></zapier-interfaces-page-embed>
+                    <p class="text-base md:text-lg mb-6 leading-relaxed">
+                        We look forward to welcoming you to a community where lakeside living meets timeless design. A
+                        member of our sales team will be in touch shortly to confirm your private tour or answer your
+                        inquiry.
+                    </p>
                 </div>
             </div>
         </div>
@@ -171,7 +80,7 @@
             </h2>
             <a href="https://www.missiongroup.ca/own/alma-on-abbott/floorplans/" target="_blank"
                 class="w-full sm:w-auto bg-alma-yellow text-black border-2 border-alma-yellow px-8 py-3 md:px-10 md:py-3.5 rounded-full text-base font-bold hover:bg-black hover:text-alma-yellow transition whitespace-nowrap cursor-pointer inline-block text-center animate-on-scroll animate-delay-200">
-                Browse Floorplans
+                Visit Website
             </a>
         </div>
     </section>
@@ -222,9 +131,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Price Animation Script -->
-    <script src="./src/price-animation.js"></script>
 
     <!-- General Animations Script -->
     <script src="./src/animations.js"></script>
